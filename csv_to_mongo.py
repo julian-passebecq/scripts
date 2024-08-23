@@ -3,15 +3,15 @@ from pymongo import MongoClient
 import urllib.parse
 
 
-username = urllib.parse.quote_plus('choze-9000') #has to be removed for production
-password = urllib.parse.quote_plus('qnUjKKFQqGGTVmJC') #has to be removed for production
-cluster = 'blue.hgntyeje.mongodb.net' #has to be removed for production
+username = urllib.parse.quote_plus('user0') #has to be removed for production
+password = urllib.parse.quote_plus('Appolosun1') #has to be removed for production
+cluster = 'blue.hgntyje.mongodb.net/' #has to be removed for production
 
 
-csv_file_path = 'data/sitemap.csv'
+csv_file_path = 'processed_data.csv'
 
 
-connection_string = f'mongodb+srv://{username}:{password}@{cluster}/?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true'
+connection_string = f'mongodb+srv://{username}:{password}@{cluster}'
 client = MongoClient(connection_string)
 
 db = client['blue-sitemaps']

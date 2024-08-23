@@ -1,1 +1,4 @@
+advertools
+pandas
 pymongo
+# Add other dependencies here
