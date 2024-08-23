@@ -1,9 +1,8 @@
-name: Run Python Scripts
+name: Update Script
 
 on:
   schedule:
-    # Run the workflow every day at 00:00 UTC
-    - croan: '0 0 * * *'
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
   workflow_dispatch: # Allows the workflow to be manually triggered
 
 jobs:
@@ -34,6 +33,6 @@ jobs:
 
     - name: Run csv_to_mongo.py
       env:
-        MONGO_URL: ${{ secrets.MONGO_URL }}  # Ensure you add your MongoDB URL as a secret in your repository settings
+        MONGO_URL: ${{ secrets.MONGO_URL }}
       run: |
         python csv_to_mongo.py
